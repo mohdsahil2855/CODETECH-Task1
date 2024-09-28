@@ -1,0 +1,54 @@
+// It is the program that converts temperature between Celsius, fahrenheit , and kelvin.
+#include<iostream>
+using namespace std;
+int main(){
+    float c,f,k;
+    int option;
+    cout<<"Choose from the following options.\n" <<endl;
+    cout<<"1. Celsius to Fahrenheit."<<endl;
+    cout<<"2. Fahrenheit to Celsius."<<endl;
+    cout<<"3. Celsius to Kelvin."<<endl;
+    cout<<"4. Kelvin to Celsius."<<endl;
+    cout<<"\n\nChoose 1, 2, 3 or 4 from the given menu ==>\n";
+    cin>>option;
+    cout<<endl;
+    switch(option){
+        case 1:
+        {
+            cout<<"Enter the temperature in celsius : ";
+            cin>>c;
+            f = 1.8*c + 32;
+            cout<<"Temperature in degree Fahrenheit "<<f<< "F"<<endl;
+        }
+        break;
+         case 2:
+        {
+            cout<<"Enter the temperature in Fahrenheit : ";
+            cin>>f;
+            c = (f-32)/1.8;
+            cout<<"Temperature in degree celsius "<<c<< "C"<<endl;
+        }
+        break;
+        case 3:
+        {
+            cout<<"Enter the temperature in celsius : ";
+            cin>>c;
+            k = c + 273.15;
+            cout<<"Temperature in Kelvin :"<<k<< "K"<<endl;
+        }
+        break;
+        case 4:
+        {
+            cout<<"Enter the temperature in Kelvin : ";
+            cin>>k;
+            c = k - 273.15;
+            cout<<"Temperature in celsius :"<<c<< "C"<<endl;
+        }
+        break;
+        default:
+        {
+            cout<<"wrong input";
+        }
+    return 0;
+}
+}
